@@ -1,0 +1,6 @@
+"seo", "Seo"
+"seo_name","Seo Plugin"
+"seo_installed_successfully","Seo Plugin wurde erfolgreich installiert. Bitte Pimcore neuladen!"
+"seo_install_failed","Seo Plugin konnte nicht installiert werden. Bitte überprüfe die Log-Dateien."
+"seo_uninstalled_successfully","Seo Plugin wurde erfolgreich deinstalliert. Bitte Pimcore neuladen!"
+"seo_uninstall_failed","Seo Plugin konnte nicht deinstalliert werden. Bitte überprüfe die Log-Dateien."

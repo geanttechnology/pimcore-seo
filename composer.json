@@ -1,0 +1,22 @@
+{
+  "name": "dachcom-digital/pimcore-seo",
+  "type": "pimcore-plugin",
+  "license": "Simple BSD",
+  "description": "Pimcore SEO Plugin",
+  "keywords": [
+    "pimcore",
+    "seo"
+  ],
+  "homepage": "https://github.com/dachcom-digital/pimcore-seo",
+  "authors": [
+    {
+      "name": "DACHCOM.DIGITAL Kai Tallafus",
+      "email": "ktallafus@dachcom.ch",
+      "homepage": "http://www.dachcom.com/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "pimcore/installer-plugin": ">=1"
+  }
+}
