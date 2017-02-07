@@ -2,6 +2,7 @@
 
 namespace Seo\Plugin;
 
-class Update {
+class Update
+{
 
 }

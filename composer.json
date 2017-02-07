@@ -1,5 +1,5 @@
 {
-  "name": "dachcom-digital/pimcore-seo",
+  "name": "dachcom-digital/seo",
   "type": "pimcore-plugin",
   "license": "Simple BSD",
   "description": "Pimcore SEO Plugin",

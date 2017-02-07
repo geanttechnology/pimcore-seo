@@ -11,18 +11,19 @@ use Pimcore\Model\Translation\Admin;
 use Pimcore\Model\User;
 use Pimcore\Tool;
 
-class Install {
-
+class Install
+{
+    /**
+     * @return bool
+     */
     public function isInstalled()
     {
         $configFile = \Pimcore\Config::locateConfigFile('seo_configurations');
 
-        if (is_file($configFile . '.php'))
-        {
+        if (is_file($configFile . '.php')) {
             $isInstalled = Configuration::get('seo_is_installed');
 
-            if ($isInstalled)
-            {
+            if ($isInstalled) {
                 return TRUE;
             }
         }
@@ -30,13 +31,16 @@ class Install {
         return FALSE;
     }
 
+    /**
+     * @return bool
+     */
     public function createConfig()
     {
         $configFile = \Pimcore\Config::locateConfigFile('seo_configurations');
 
-        if (is_file($configFile . '.BACKUP'))
-        {
+        if (is_file($configFile . '.BACKUP')) {
             rename($configFile . '.BACKUP', $configFile . '.php');
+
             return TRUE;
         }
 
@@ -47,24 +51,27 @@ class Install {
         Configuration::set('seo_is_installed', TRUE);
 
         return TRUE;
-
     }
 
+    /**
+     *
+     */
     public function removeConfig()
     {
         $configFile = \Pimcore\Config::locateConfigFile('seo_configurations');
 
-        if (is_file($configFile . '.php'))
-        {
+        if (is_file($configFile . '.php')) {
             rename($configFile . '.php', $configFile . '.BACKUP');
         }
     }
 
+    /**
+     *
+     */
     public function installAdminTranslations()
     {
         $csv = SEO_INSTALL_PATH . '/translations/data.csv';
-        Admin::importTranslationsFromFile($csv, true, \Pimcore\Tool\Admin::getLanguages());
+        Admin::importTranslationsFromFile($csv, TRUE, \Pimcore\Tool\Admin::getLanguages());
     }
-
 
 }
